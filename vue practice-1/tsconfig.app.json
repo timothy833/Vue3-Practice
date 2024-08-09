@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "composite": true,  // 启用增量编译
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",  // 存储增量编译信息的位置
+    "target": "ES2020", // 设置 ECMAScript 目标版本
+    "useDefineForClassFields": true,// 启用 useDefineForClassFields
+    "module": "ESNext", // 设置模块系统为 ESNext
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // 包含的库文件
+    "skipLibCheck": true,// 跳过库文件的类型检查
+    "types": ["node"], //特别注意 "types": ["node"] 这一行，它确保 TypeScript 知道我们会用到 Node.js 的类型定义。
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",// 模块解析策略为 bundler
+    "allowImportingTsExtensions": true, // 允许导入 TypeScript 扩展名
+    "resolveJsonModule": true,// 允许导入 JSON 模块
+    "isolatedModules": true,// 每个文件作为单独的模块处理
+    "moduleDetection": "force",// 强制模块检测
+    "noEmit": true,// 不生成输出文件
+    "jsx": "preserve",// 保留 JSX 语法
+
+    /* Linting */
+    "strict": true, // 启用严格类型检查
+    "noUnusedLocals": true,  // 检查未使用的局部变量
+    "noUnusedParameters": true, // 检查未使用的参数
+    "noFallthroughCasesInSwitch": true // 防止 switch 语句贯穿
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]  // 包含的文件类型
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3 Practice</title>
+    <style type="text/css">
+        /*畫面reset*/
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', Sans-serif;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+        }
+        
+        body{
+            /* 超過水平範圍隱藏 */
+            overflow-x: hidden; 
+        }
+
+        .table-wrapper{
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px; /* 為桌面設置內邊距，左右各20px */
+            box-sizing: border-box; /* 確保內邊距不會增加總寬度 */
+        }
+
+        table{
+            width: 100%;
+            /* 相鄰兩邊框合併 */
+            border-collapse: collapse;
+            /* margin: 20px auto 20px auto; */
+        }
+        td{
+            padding: 10px;
+            border: 1px solid #652e01;
+            background-color:rgb(217, 156, 156);
+            text-align: center;
+            /* 強制換行，防止文字溢出容器 */
+            word-wrap: break-word; 
+        }
+        td:hover{
+            background-color: rgb(170, 193, 230);
+        }
+        td:hover a{
+            color: rgb(187, 123, 4);
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            color: #780804;
+            font-weight: 500;
+        }
+
+        @media (max-width:1024px) {
+            .table-wrapper{
+                padding: 0 15px; /* 平板設置內邊距，左右各15px */
+            }
+
+            table{
+                width: 100%;
+            }
+
+            tr{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            td{
+                flex: 1 1 50%;
+                box-sizing: border-box;
+            }
+
+            td a{
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            .table-wrapper{
+                padding: 0 10px;
+            }
+            
+            tbody, tr,td{
+                display: block;
+                width: 100%;
+                /* padding: 10px; */
+                box-sizing: border-box;
+            }
+            a{
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Vue3 Practice</h1>
+    <div class="table-wrapper">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="practice 1/index.html">基本V指令練習</a>
+                    </td>
+                    <td>
+                        <a href="practice 2/index.html">component練習</a>
+                    </td>
+                    <td>
+                        <a href="practice 3/index.html">emit練習</a>
+                    </td>
+                    <td>
+                        <a href="practice 4/index.html">emitauto練習</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="practice 5/index.html">slot練習</a>
+                    </td>
+                    <td>
+                        <a href="practice 6/index.html">tab練習</a>
+                    </td>
+                    <td>
+                        <a href="practice 7/index.html">生命週期練習console.log</a>
+                    </td>
+                    <td>
+                        <a href="practice 8/index.html">mixins練習</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="practice 9/index.html">compositionAPI V指令練習</a>
+                    </td>
+                    <td>
+                        <a href="practice 10/index.html">compositionAPI PropEmit練習</a>
+                    </td>
+                    <td>
+                        <a href="practice 11/index.html">compositionAPI modelShare練習</a>
+                    </td>
+                    <td>
+                        <a href="practice 12/index.html">compositionAPI modelShare ts練習</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
